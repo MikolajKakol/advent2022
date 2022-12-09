@@ -1,3 +1,4 @@
+import io.kotest.assertions.assertSoftly
 import io.kotest.core.spec.style.FreeSpec
 import io.kotest.matchers.shouldBe
 
@@ -98,6 +99,33 @@ class AdventTest : FreeSpec({
         }
     }
 
+    "Day 6" - {
+        "part 6" - {
+            "test" {
+                assertSoftly{
+                    day06part1("bvwbjplbgvbhsrlpgdmjqwftvncz") shouldBe 5
+                    day06part1("nppdvjthqldpwncqszvftbrmjlhg") shouldBe 6
+                    day06part1("nznrnfrfntjfmvfwmzdfjlvtqnbhcprsg") shouldBe 10
+                    day06part1("zcfzfwzzqfrljwzlrfnpqdbhtmscgvjw") shouldBe 11
+                }
+            }
+            "actual" {
+                day06part1(readInput("day06_input").first()) shouldBe 1538
+            }
+        }
+        "part 2" - {
+            "test" {
+                day06part2("mjqjpqmgbljsphdztnvjfqwrcgsmlb") shouldBe 19
+                day06part2("bvwbjplbgvbhsrlpgdmjqwftvncz") shouldBe 23
+                day06part2("nppdvjthqldpwncqszvftbrmjlhg") shouldBe 23
+                day06part2("nznrnfrfntjfmvfwmzdfjlvtqnbhcprsg") shouldBe 29
+                day06part2("zcfzfwzzqfrljwzlrfnpqdbhtmscgvjw") shouldBe 26
+            }
+            "actual" {
+                day06part2(readInput("day06_input").first()) shouldBe 2315
+            }
+        }
+    }
 
 //    "Day X" - {
 //        "part X" - {
