@@ -79,7 +79,26 @@ class AdventTest : FreeSpec({
         }
     }
 
-    
+    "Day 5" - {
+        "part 5" - {
+            "test" {
+                day05part1(readInput("day05_input_test")) shouldBe "CMZ"
+            }
+            "actual" {
+                day05part1(readInput("day05_input")) shouldBe "TLNGFGMFN"
+            }
+        }
+        "part 2" - {
+            "test" {
+                day05part2(readInput("day05_input_test")) shouldBe "MCD"
+            }
+            "actual" {
+                day05part2(readInput("day05_input")) shouldBe "FGLQJCMBD"
+            }
+        }
+    }
+
+
 //    "Day X" - {
 //        "part X" - {
 //            "test" {
