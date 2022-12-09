@@ -1,24 +1,13 @@
-fun main() {
-    val testInput = readInput("Day01_input")
-
-    part1(testInput)
-    part2(testInput)
-}
-
-private fun part1(testInput: List<String>) {
-    val result = createElfs(testInput)
+fun day01part1(testInput: List<String>) =
+    createElfs(testInput)
         .maxBy { it.total }
         .total
-    println(result)
-}
 
-private fun part2(testInput: List<String>) {
-    val result = createElfs(testInput)
+fun day01part2(testInput: List<String>) =
+    createElfs(testInput)
         .sortedByDescending { it.total }
         .take(3)
         .sumOf { it.total }
-    println(result)
-}
 
 private fun createElfs(calories: List<String>): List<Elf> {
     var subtotal = 0

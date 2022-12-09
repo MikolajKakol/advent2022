@@ -1,24 +1,11 @@
-fun main() {
-    val testInput = readInput("Day04_input")
-
-    part1(testInput)
-    part2(testInput)
+fun day04part1(testInput: List<String>) = testInput.count {
+    val (shift1, shift2) = shifts(it)
+    shift2.contains(shift1) || shift1.contains(shift2)
 }
 
-private fun part1(testInput: List<String>) {
-    val result = testInput.count {
-        val (shift1, shift2) = shifts(it)
-        shift2.contains(shift1) || shift1.contains(shift2)
-    }
-    println(result)
-}
-
-private fun part2(testInput: List<String>) {
-    val result = testInput.count {
-        val (shift1, shift2) = shifts(it)
-        shift2.overlaps(shift1) || shift1.overlaps(shift2)
-    }
-    println(result)
+fun day04part2(testInput: List<String>) = testInput.count {
+    val (shift1, shift2) = shifts(it)
+    shift2.overlaps(shift1) || shift1.overlaps(shift2)
 }
 
 private fun shifts(it: String): Pair<IntRange, IntRange> {

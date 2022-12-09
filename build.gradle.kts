@@ -7,13 +7,15 @@ repositories {
 }
 
 tasks {
-    sourceSets {
-        main {
-            java.srcDirs("src")
-        }
-    }
-
     wrapper {
         gradleVersion = "7.6"
     }
+    test {
+        useJUnitPlatform()
+    }
+}
+
+dependencies {
+    testImplementation ("io.kotest:kotest-assertions-core:5.5.4")
+    testImplementation ("io.kotest:kotest-runner-junit5:5.5.4")
 }
