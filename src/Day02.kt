@@ -44,7 +44,7 @@ private fun calculateRoundScore(opponentAction: Action, duelOutcome: DuelOutcome
     return duelOutcome.score + scoreFromPick
 }
 
-enum class DuelOutcome(val code: Char, val score: Int) {
+private enum class DuelOutcome(val code: Char, val score: Int) {
     Win('Z', 6),
     Draw('Y', 3),
     Lose('X', 0),
