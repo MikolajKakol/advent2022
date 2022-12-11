@@ -165,6 +165,24 @@ class AdventTest : FreeSpec({
         }
     }
 
+    "Day 9" - {
+        "part 9" - {
+            "test" {
+                day09part1(readInput("day09_input_test")) shouldBe 13
+            }
+            "actual" {
+                day09part1(readInput("day09_input")) shouldBe 6269
+            }
+        }
+        "part 2" - {
+            "test" {
+                day09part2(readInput("day09_input_test_2")) shouldBe 36
+            }
+            "actual" {
+                day09part2(readInput("day09_input")) shouldBe 2557
+            }
+        }
+    }
 
 //    "Day X" - {
 //        "part X" - {
