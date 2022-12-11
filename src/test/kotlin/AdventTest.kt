@@ -102,7 +102,7 @@ class AdventTest : FreeSpec({
     "Day 6" - {
         "part 6" - {
             "test" {
-                assertSoftly{
+                assertSoftly {
                     day06part1("bvwbjplbgvbhsrlpgdmjqwftvncz") shouldBe 5
                     day06part1("nppdvjthqldpwncqszvftbrmjlhg") shouldBe 6
                     day06part1("nznrnfrfntjfmvfwmzdfjlvtqnbhcprsg") shouldBe 10
@@ -145,7 +145,27 @@ class AdventTest : FreeSpec({
             }
         }
     }
-    
+
+    "Day 8" - {
+        "part 8" - {
+            "test" {
+                day08part1(readInput("day08_input_test")) shouldBe 21
+            }
+            "actual" {
+                day08part1(readInput("day08_input")) shouldBe 1763
+            }
+        }
+        "part 2" - {
+            "test" {
+                day08part2(readInput("day08_input_test")) shouldBe 8
+            }
+            "actual" {
+                day08part2(readInput("day08_input")) shouldBe 671160
+            }
+        }
+    }
+
+
 //    "Day X" - {
 //        "part X" - {
 //            "test" {
