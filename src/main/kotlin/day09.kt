@@ -41,7 +41,7 @@ private class Rope(chunks: Int = 2) {
     }
 }
 
-private enum class Direction {
+enum class Direction {
     UP,
     DOWN,
     LEFT,
@@ -55,7 +55,7 @@ private enum class Direction {
     }
 }
 
-private data class Point(val x: Int, val y: Int){
+data class Point(val x: Int, val y: Int){
 
     fun move(direction: Direction) = when (direction) {
         Direction.UP -> Point(x, y + 1)
