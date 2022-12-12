@@ -201,7 +201,7 @@ class AdventTest : FreeSpec({
 ####....####....####....####....####....
 #####.....#####.....#####.....#####.....
 ######......######......######......####
-#######.......#######.......#######.....""".trimIndent()
+#######.......#######.......#######.....""".trim()
             }
             "actual" {
                 day10part2(readInput("day10_input")) shouldBe """
@@ -214,6 +214,26 @@ class AdventTest : FreeSpec({
             }
         }
     }
+
+    "Day 11" - {
+        "part 11" - {
+            "test" {
+                day11part1(readInput("day11_input_test")) shouldBe 10605
+            }
+            "actual" {
+                day11part1(readInput("day11_input")) shouldBe 50616
+            }
+        }
+        "part 2" - {
+            "test" {
+                day11part2(readInput("day11_input_test")) shouldBe 2713310158
+            }
+            "actual" {
+                day11part2(readInput("day11_input")) shouldBe 11309046332L
+            }
+        }
+    }
+    
 
 //    "Day X" - {
 //        "part X" - {
