@@ -184,21 +184,52 @@ class AdventTest : FreeSpec({
         }
     }
 
+    "Day 10" - {
+        "part 10" - {
+            "test" {
+                day10part1(readInput("day10_input_test")) shouldBe 13140
+            }
+            "actual" {
+                day10part1(readInput("day10_input")) shouldBe 14060
+            }
+        }
+        "part 2" - {
+            "test" {
+                day10part2(readInput("day10_input_test")) shouldBe """
+                    ##..##..##..##..##..##..##..##..##..##..
+                    ###...###...###...###...###...###...###.
+                    ####....####....####....####....####....
+                    #####.....#####.....#####.....#####.....
+                    ######......######......######......####
+                    #######.......#######.......#######.....""".trimIndent()
+            }
+            "actual" {
+                day10part2(readInput("day10_input")) shouldBe """
+###...##..###..#..#.####.#..#.####...###
+#..#.#..#.#..#.#.#..#....#.#..#.......##
+#..#.#..#.#..#.##...###..##...###.....##
+###..####.###..#.#..#....#.#..#.......#.
+#....#..#.#....#.#..#....#.#..#....#..#.
+#....#..#.#....#..#.#....#..#.####..##..""".trim()
+            }
+        }
+    }
+
 //    "Day X" - {
 //        "part X" - {
 //            "test" {
-//                day0Xpart1(readInput("day0X_input_test")) shouldBe 0
+//                dayXpart1(readInput("dayX_input_test")) shouldBe 0
 //            }
 //            "actual" {
-//                day0Xpart1(readInput("day0X_input")) shouldBe 0
+//                dayXpart1(readInput("dayX_input")) shouldBe 0
 //            }
 //        }
 //        "part 2" - {
 //            "test" {
-//                day0Xpart2(readInput("day0X_input_test")) shouldBe 0
+//                dayXpart2(readInput("dayX_input_test")) shouldBe 0
 //            }
 //            "actual" {
-//                day0Xpart2(readInput("day0X_input")) shouldBe 0
+//                dayXpart2(readInput("dayX_input")) shouldBe 0
 //            }
 //        }
 //    }
