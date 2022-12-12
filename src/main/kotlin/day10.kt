@@ -39,19 +39,18 @@ class Screen {
     }
 
     private fun advanceCycle() {
-        val nextCycle = finishedCyclesCount + 1
-        if (keyCycles.contains(nextCycle)) {
+        if (keyCycles.contains(finishedCyclesCount + 1)) {
             keyCyclesValues.add(regX)
         }
 
-        val renderPoint = (nextCycle % 40).let { if (it == 0) 40 else it }
-        val spritePosition = regX until regX + 3
+        val renderPoint = finishedCyclesCount % 40
+        val spritePosition = regX - 1 until regX + 2
         val renderPixel = if (spritePosition.contains(renderPoint))
             "#"
         else
             "."
         buffer.append(renderPixel)
-        if (nextCycle % 40 == 0) {
+        if (finishedCyclesCount % 40 == 39) {
             buffer.append("\n")
         }
 
