@@ -252,6 +252,25 @@ class AdventTest : FreeSpec({
             }
         }
     }
+    "Day 13" - {
+        "part 13" - {
+            "test" {
+                day13part1(readInput("day13_input_test")) shouldBe 13
+            }
+            "actual" {
+                day13part1(readInput("day13_input")) shouldBe 0
+            }
+        }
+        "part 2" - {
+            "test" {
+                day13part2(readInput("day13_input_test")) shouldBe 0
+            }
+            "actual" {
+                day13part2(readInput("day13_input")) shouldBe 0
+            }
+        }
+    }
+
 
 //    "Day X" - {
 //        "part X" - {
